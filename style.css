@@ -1,0 +1,189 @@
+:root {
+  /* Define custom colors */
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  /* Set font and background color */
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--light-gray);
+  /* Center content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  /* Remove margin and add top margin */
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.container {
+  /* Create a grid layout with a single column */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  /* Limit the maximum width */
+  max-width: 22.1rem;
+  /* Center content horizontally */
+  justify-content: center;
+}
+
+.card {
+  /* Add padding to the card */
+  padding: 1rem 1.5rem;
+}
+
+.join-our-community {
+  /* Set background color and add border radius */
+  background-color: white;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.join-our-community p:nth-child(2) {
+  /* Adjust line height */
+  line-height: 1.25rem;
+}
+
+.join-our-community p:nth-child(3) {
+  /* Adjust line height */
+  line-height: 1.75rem;
+}
+
+.monthly-subscription {
+  /* Set background color and create a column layout */
+  background-color: var(--cyan);
+  display: flex;
+  flex-direction: column;
+}
+
+.monthly-subscription h2 {
+  /* Set text color */
+  color: white;
+}
+
+.per-month + p {
+  /* Set text color */
+  color: white;
+}
+
+button {
+  /* Set button styles */
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  background-color: var(--bright-yellow);
+  color: white;
+  border-radius: 0.25rem;
+  border: none;
+  margin: 1rem 0;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 10px 10px hsl(179.07deg, 64.82%, 39.02%);
+}
+
+button:hover {
+  /* Change cursor on hover */
+  cursor: pointer;
+}
+
+.why-us {
+  /* Set background color and add border radius */
+  background-color: hsl(179, 57%, 49%);
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.why-us h2 {
+  /* Set text color */
+  color: white;
+}
+
+.join-our-community > h2 {
+  /* Set text color */
+  color: var(--cyan);
+}
+
+ul {
+  /* Remove default list styles and adjust line height */
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.55rem;
+}
+
+.per-month {
+  /* Set text color and adjust padding */
+  color: hsl(179, 62%, 75%);
+  padding-left: 2px;
+}
+
+span {
+  /* Set text color and font size */
+  color: white;
+  font-size: 2rem;
+}
+
+.bright-yellow {
+  /* Set text color */
+  color: var(--bright-yellow);
+}
+
+.light-gray {
+  /* Set text color */
+  color: var(--light-gray);
+}
+
+.grayish-blue {
+  /* Set text color */
+  color: var(--grayish-blue);
+}
+
+@media (min-width: 941px) {
+  /* Apply styles for screens with a minimum width of 941px */
+  .container {
+    /* Change grid layout to two columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* Increase maximum width */
+    max-width: 40.3rem;
+  }
+
+  .join-our-community {
+    /* Span two columns */
+    grid-column: span 2;
+  }
+
+  .card {
+    /* Increase padding */
+    padding: 2rem;
+  }
+
+  .monthly-subscription {
+    /* Adjust border radius */
+    border-radius: 0 0 0 0.25rem;
+  }
+
+  .why-us {
+    /* Adjust border radius */
+    border-radius: 0 0 0.25rem 0;
+  }
+}
+
+.attribution {
+  /* Set font size and text alignment */
+  font-size: 11px;
+  text-align: center;
+  /* Add top margin */
+  margin-top: 2rem;
+}
+
+.attribution a {
+  /* Set link color */
+  color: hsl(228, 45%, 44%);
+}
